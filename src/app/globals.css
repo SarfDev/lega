@@ -2,32 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@font-face {
+  font-family: 'Lol_bold';
+  src: url('./../fonts/BeaufortforLOL-Bold.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Lol_medium';
+  src: url('./../fonts/BeaufortforLOL-Medium.ttf');
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'Lol_text';
+  src: url('./../fonts/Spiegel_TT_Regular.ttf');
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+*{
+   font-family: "Lol_text";
+}
+
+body{
+  @apply relative
+}
+
+
+h1{
+  font-family: 'Lol_bold';
+  @apply text-[56px] text-[#C89B3C]
+}
+
+p{
+  @apply text-[18px] text-[#A09B8C]
+}
+
+
+.borderSpy{
+  @apply bg-[#0A1428] border border-[#0AC8B9]
+}
+
+.contanerNum{
+  @apply md:text-9xl text-7xl text-white px-[50px] py-3 borderSpy inline-block
+}
+
+.contanerAsd{
+  @apply md:text-5xl text-white px-[50px] py-3 borderSpy inline-block
 }
