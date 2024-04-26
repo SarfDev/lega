@@ -32,6 +32,11 @@ h1{
   @apply text-[56px] text-[#C89B3C]
 }
 
+h2{
+
+  @apply text-[20px] text-[#A09B8C]
+}
+
 p{
   @apply text-[18px] text-[#A09B8C]
 }
@@ -47,4 +52,9 @@ p{
 
 .contanerAsd{
   @apply md:text-5xl text-white px-[50px] py-3 borderSpy inline-block
+}
+
+.bottone{
+  font-family: 'Lol_bold';
+  @apply borderSpy text-[24px] text-white py-[10px]
 }
