@@ -9,6 +9,7 @@ export default function Home() {
   const [number, setNumber] = useState(1);
   const [champrRand, setChamprRand] = useState([]);
   const [itRand, setItRand] = useState([]);
+  let i = 0
 
   function inc() {
     if (number < 5 && number >= 1) {
@@ -71,19 +72,24 @@ export default function Home() {
         </div>
 
         <div className='flex md:flex-row flex-col md:items-start items-center justify-start w-full gap-3 pt-7'>
-          {champrRand.map((champion, index) => (
-            <Card
+          {champrRand.map((champion, index) => {
+            
+            if(index > 0){
+              i +=6;
+            }
+            
+            return (<Card
               key={index}
               nome={champion.nomeCampione}
               imgCampione={champion.url_campione}
-              item1={itRand[index].img_url}
-              item2={itRand[index+1].img_url}
-              item3={itRand[index+2].img_url}
-              item4={itRand[index+3].img_url}
-              item5={itRand[index+4].img_url}
-              item6={itRand[index+5].img_url}
-            />
-          ))}
+              item1={itRand[i].img_url}
+              item2={itRand[i+1].img_url}
+              item3={itRand[i+2].img_url}
+              item4={itRand[i+3].img_url}
+              item5={itRand[i+4].img_url}
+              item6={itRand[i+5].img_url}
+            />)
+          })}
         </div>
       </section>
 
