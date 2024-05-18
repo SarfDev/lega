@@ -8,6 +8,7 @@ import { random } from '../../components/random';
 export default function Home() {
   const [number, setNumber] = useState(1);
   const [champrRand, setChamprRand] = useState([]);
+  const [normalBuild, setNormalBuild] = useState(false)
   const [itRand, setItRand] = useState([]);
   let i = 0
 
@@ -60,6 +61,13 @@ export default function Home() {
           <button className='contanerAsd' onClick={dec}>
             -
           </button>
+        </div>
+
+        <div className="form-control ">
+          <label className="label cursor-pointer gap-3">
+            <span className={`label-text text-[#C89B3C] ${normalBuild? "text-white":"text-gray-600"}`}>Normal build</span> 
+            <input type="checkbox" className={`toggle toggle-info borderSpy`} onChange={()=> setNormalBuild((prev) => !prev)}/>
+          </label>
         </div>
 
         <div>
