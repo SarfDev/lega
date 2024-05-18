@@ -2,9 +2,9 @@ export function Card({imgCampione, item1,item2,item3,item4,item5,item6,nome}){
 
     return(
 
-        <div className='flex flex-col gap-4 items-start md:w-[250px]' style={{display:"flex", flexDirection:"column", gap:"16px",alignItems:"center"}}>
+        <div className='flex flex-col gap-4 items-start' style={{display:"flex", flexDirection:"column", gap:"16px",alignItems:"center"}}>
 
-            <img src={imgCampione} className='h-60' style={{height:"240px",objectFit:"cover"}}/>
+            <img src={imgCampione} className='h-60' style={{height:"240px",objectFit:"cover",width:"250px"}}/>
 
             <h2>{nome}</h2>
 
