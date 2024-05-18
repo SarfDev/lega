@@ -79,7 +79,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className='flex md:flex-row flex-col md:items-start items-center justify-start w-full gap-3 pt-7'>
+        <div className='xl:flex xl:flex-row md:grid md:grid-rows-2 md:grid-cols-3 xl:items-center flex-col  items-center justify-center w-full gap-8 pt-7'>
           {champrRand.map((champion, index) => {
             
             if(index > 0){
